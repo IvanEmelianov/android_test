@@ -22,12 +22,11 @@ class ContributorsAdapter : RecyclerAdapter<User, ContributorsHolder>() {
     override fun onBindHolder(holder: ContributorsHolder, item: User, pos: Int) {
         holder.apply {
 
-            /*Glide.with(itemView)
+            Glide.with(itemView)
                 .load(item.image)
                 .error(R.drawable.ic_baseline_accessible_forward_24)
                 .into(imgAvatar)
-*/
-            
+
             tvLogin.text = item.login
             tvId.text = item.id.toString()
 

@@ -25,7 +25,9 @@ class ContributorsFragment : BaseFragment(), ContributorsView {
 
     override fun initView() {
 
-        /*listContact.adapter = adapter*/
+        listContact.adapter = adapter
+
+
 
 
     }
