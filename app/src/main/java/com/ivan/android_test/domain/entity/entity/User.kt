@@ -1,4 +1,4 @@
-package com.ivan.android_test.domain.entity
+package com.ivan.android_test.domain.entity.entity
 
 import android.net.Uri
 
