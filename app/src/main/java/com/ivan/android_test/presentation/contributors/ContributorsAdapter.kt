@@ -23,7 +23,7 @@ class ContributorsAdapter : RecyclerAdapter<User, ContributorsHolder>() {
         holder.apply {
 
             Glide.with(itemView)
-                .load(item.image)
+                .load(item.avatar)
                 .error(R.drawable.ic_baseline_accessible_forward_24)
                 .into(imgAvatar)
 

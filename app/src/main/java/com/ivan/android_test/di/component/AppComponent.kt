@@ -21,7 +21,8 @@ import javax.inject.Singleton
     ActivityBuilder::class,
     RepositoryModule::class,
     NetworkModule::class,
-    AppScreenModule::class
+    AppScreenModule::class,
+    MapperModule::class
 
 ])
 interface AppComponent : AndroidInjector<TestApplication> {
