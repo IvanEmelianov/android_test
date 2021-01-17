@@ -10,12 +10,12 @@ import io.reactivex.Single
 
 class UserRepositoryImpl(
     private val service: TestService,
-    private val mapper: Mapper<UserResponse, User>
+    private val mapper: Mapper<List<UserResponse>, List<User>>
 ) : UserRepository {
 
-    override fun get(since: Int): Single<User> =
+    override fun get(since: Int): Single<List<User>> =
         service.getUsers(since)
-            .map { mapper.transform(it) }
+            .map(mapper::transform)
 
     /*override fun getIcon(avatar: Uri): Single<Bitmap> =
         service.getUserImg("https://avatars0.githubusercontent.com/u/${avatar}.png")

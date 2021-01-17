@@ -11,7 +11,7 @@ interface TestService {
     @GET("users")
     fun getUsers(
         @Query("since") since: Int
-    ): Single<UserResponse>
+    ): Single<List<UserResponse>>
 
     /*@GET
     fun getUserImg(@Url url: String): Single<ResponseBody>*/

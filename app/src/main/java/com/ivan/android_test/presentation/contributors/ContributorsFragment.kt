@@ -2,6 +2,7 @@ package com.ivan.android_test.presentation.contributors
 
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
+import com.ivan.android_test.R
 import com.ivan.android_test.domain.entity.User
 import com.ivan.android_test.presentation.base.fragment.BaseFragment
 import dagger.Lazy
@@ -10,11 +11,7 @@ import javax.inject.Inject
 
 class ContributorsFragment() : BaseFragment(), ContributorsView {
 
-    companion object {
-    lateinit var getUserCallback: ((Int) -> Unit)
-    }
-
-    override val layoutRes = com.ivan.android_test.R.layout.fragment_contributors
+    override val layoutRes = R.layout.fragment_contributors
 
     @Inject
     lateinit var daggerPresenter: Lazy<ContributorsPresenter>
@@ -30,12 +27,7 @@ class ContributorsFragment() : BaseFragment(), ContributorsView {
 
     override fun initView() {
         listContact.adapter = adapter
-
-        getUserCallback = { since: Int ->
-            presenter.getUser(since)
-
-        }
-
+        presenter.getUser(0)
     }
 
     override fun setUser(user: List<User>) {

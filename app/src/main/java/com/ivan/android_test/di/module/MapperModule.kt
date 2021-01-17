@@ -11,6 +11,5 @@ import dagger.Provides
 class MapperModule {
 
     @Provides
-    fun provideMapper(): Mapper<UserResponse, User> =
-        UserMapper()
+    fun provideMapper(): Mapper<List<UserResponse>, List<User>> = UserMapper()
 }

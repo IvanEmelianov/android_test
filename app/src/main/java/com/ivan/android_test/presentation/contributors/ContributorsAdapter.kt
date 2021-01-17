@@ -16,6 +16,9 @@ import com.ivan.android_test.presentation.base.adapter.RecyclerAdapter
 
 class ContributorsAdapter : RecyclerAdapter<User, ContributorsHolder>() {
 
+    companion object {
+        const val TAG = "ContributorsAdapter"
+    }
 
     lateinit var callback: ((User, Int) -> Unit)
 
@@ -26,19 +29,17 @@ class ContributorsAdapter : RecyclerAdapter<User, ContributorsHolder>() {
     override fun onBindHolder(holder: ContributorsHolder, item: User, pos: Int) {
         holder.apply {
 
-            val uri = "https://avatars0.githubusercontent.com/u/${item.id}?v=4.png"
-
             Glide.with(itemView)
-                .load(uri)
+                .load(item.avatarUrl)
                 .error(R.drawable.ic_baseline_accessible_forward_24)
                 .into(imgAvatar)
 
             tvLogin.text = item.login
             tvId.text = item.id.toString()
 
-            Log.d("getId", tvId.toString())
-            Log.d("getLogin", tvLogin.toString())
-            Log.d("getAvatar", imgAvatar.toString())
+            Log.d(TAG, "getId: $tvId")
+            Log.d(TAG, "getLogin: $tvLogin")
+            Log.d(TAG, "getAvatar: $imgAvatar")
 
             itemView.setOnClickListener {
                 callback.invoke(item, pos)
@@ -48,7 +49,7 @@ class ContributorsAdapter : RecyclerAdapter<User, ContributorsHolder>() {
 }
 
 
-class ContributorsHolder(view: View) : RecyclerView.ViewHolder(view){
+class ContributorsHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     val imgAvatar: ImageView = view.findViewById(R.id.imgAvatar)
     val tvLogin: TextView = view.findViewById(R.id.tvLogin)

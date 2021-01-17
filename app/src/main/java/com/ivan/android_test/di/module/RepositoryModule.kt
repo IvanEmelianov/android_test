@@ -17,7 +17,6 @@ class RepositoryModule {
     @Singleton
     fun provideUserRepository(
         service: TestService,
-        mapper: Mapper<UserResponse, User>
-    ): UserRepository =
-        UserRepositoryImpl(service, mapper)
+        mapper: Mapper<List<UserResponse>, List<User>>
+    ): UserRepository = UserRepositoryImpl(service, mapper)
 }

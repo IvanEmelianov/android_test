@@ -10,7 +10,8 @@ class UserInteractor(
 ) {
 
     fun getUsers(since: Int) =
-        userRepository.get(since)
+        userRepository.
+        get(since)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
 

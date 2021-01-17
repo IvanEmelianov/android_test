@@ -8,7 +8,7 @@ import io.reactivex.Single
 
 interface UserRepository {
 
-    fun get(since: Int): Single<User>
+    fun get(since: Int): Single<List<User>>
 
     /*fun getIcon(avatar: Uri): Single<Bitmap>*/
 }
