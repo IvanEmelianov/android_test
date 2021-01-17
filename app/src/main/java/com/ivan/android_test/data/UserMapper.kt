@@ -7,7 +7,7 @@ class UserMapper : Mapper<UserResponse, User> {
     override fun transform(value: UserResponse): User =
         User(
             login = value.login,
-            id = value.id,
-            avatar = value.avatar
-        )
+            id = value.id)
+            /*avatar = value.avatar*/
+
 }

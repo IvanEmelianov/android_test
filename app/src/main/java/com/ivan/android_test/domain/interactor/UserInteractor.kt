@@ -14,9 +14,9 @@ class UserInteractor(
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
 
-    fun getAvatarUsers(avatar: Uri) =
+    /*fun getAvatarUsers(avatar: Uri) =
         userRepository.getIcon(avatar)
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribeOn(Schedulers.io())
+            .subscribeOn(Schedulers.io())*/
 
 }

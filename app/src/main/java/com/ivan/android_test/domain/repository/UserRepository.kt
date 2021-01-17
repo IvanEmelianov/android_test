@@ -10,5 +10,5 @@ interface UserRepository {
 
     fun get(since: Int): Single<User>
 
-    fun getIcon(avatar: Uri): Single<Bitmap>
+    /*fun getIcon(avatar: Uri): Single<Bitmap>*/
 }

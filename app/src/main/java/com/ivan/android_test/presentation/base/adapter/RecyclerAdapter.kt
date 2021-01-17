@@ -3,6 +3,7 @@ package com.ivan.android_test.presentation.base.adapter
 import android.content.Context
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.ivan.android_test.data.UserResponse
 
 abstract class RecyclerAdapter<Model, Holder: RecyclerView.ViewHolder> : RecyclerView.Adapter<Holder> {
     private var items: ArrayList<Model>

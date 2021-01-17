@@ -13,8 +13,8 @@ interface TestService {
         @Query("since") since: Int
     ): Single<UserResponse>
 
-    @GET
-    fun getUserImg(@Url url: String): Single<ResponseBody>
+    /*@GET
+    fun getUserImg(@Url url: String): Single<ResponseBody>*/
 
 }
 

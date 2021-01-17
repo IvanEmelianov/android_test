@@ -4,6 +4,6 @@ import android.net.Uri
 
 data class User(
     val login: String,
-    val id: Long,
-    val avatar: Uri
+    val id: Long
+    /*val avatar: Uri*/
 )

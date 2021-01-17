@@ -17,8 +17,8 @@ class UserRepositoryImpl(
         service.getUsers(since)
             .map { mapper.transform(it) }
 
-    override fun getIcon(avatar: Uri): Single<Bitmap> =
+    /*override fun getIcon(avatar: Uri): Single<Bitmap> =
         service.getUserImg("https://avatars0.githubusercontent.com/u/${avatar}.png")
-            .map { BitmapFactory.decodeStream(it.byteStream()) }
+            .map { BitmapFactory.decodeStream(it.byteStream()) }*/
 
 }
